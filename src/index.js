@@ -1,3 +1,4 @@
+require("dotenv").config();
 // src/index.js
 const express = require("express");
 const mongoose = require("mongoose");
@@ -7,10 +8,9 @@ const routes = require("./app/routes/routes");
 // const connectDB = require("./config/db");
 
 const app = express();
-
 // Connect to MongoDB
 mongoose
-    .connect("mongodb://localhost:27017/tokpedplay", {
+    .connect(process.env.DB_URL, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
     })
