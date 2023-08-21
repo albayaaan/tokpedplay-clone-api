@@ -6,6 +6,7 @@ const router = express.Router();
 
 // Routes for videos
 // router.post("/videos", homeController.createVideo);
+router.get("/", homeController.run);
 router.get("/videos", homeController.getAllVideosThumbnail);
 router.get("/videos/:id", homeController.getDetailVideo);
 router.get("/videos/:id/products", homeController.getAllProductsByVideoId);

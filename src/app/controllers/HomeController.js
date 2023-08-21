@@ -3,6 +3,10 @@ const VideoService = require("../services/VideoService");
 const ProductService = require("../services/ProductService");
 const CommentService = require("../services/CommentService");
 
+async function run(req, res) {
+    res.send("ruuun");
+}
+
 async function getAllVideosThumbnail(req, res) {
     try {
         const videos = await VideoService.getAllVideosThumbnail();
@@ -68,4 +72,5 @@ module.exports = {
     getAllProductsByVideoId,
     getAllCommentsByVideoId,
     createComment,
+    run,
 };
