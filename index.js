@@ -10,10 +10,13 @@ const routes = require("./src/app/routes/routes");
 const app = express();
 // Connect to MongoDB
 mongoose
-    .connect(process.env.DB_URL, {
-        useNewUrlParser: true,
-        useUnifiedTopology: true,
-    })
+    .connect(
+        "mongodb+srv://abyan:cHoLpCSoUeZ8GUGB@cluster0.8bc74im.mongodb.net/tokpedplay",
+        {
+            useNewUrlParser: true,
+            useUnifiedTopology: true,
+        }
+    )
     .then(() => {
         console.log("Connected to MongoDB");
         app.listen(3000, () => {
